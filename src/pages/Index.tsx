@@ -1,5 +1,6 @@
 import { Particles } from "@/components/Particles";
 import { HeroSection } from "@/components/HeroSection";
+import { CinematicDivider } from "@/components/CinematicDivider";
 import { StorySection } from "@/components/StorySection";
 import { BeliefsSection } from "@/components/BeliefsSection";
 import { WhatYouBuildSection } from "@/components/WhatYouBuildSection";
@@ -10,6 +11,11 @@ import { AudienceSection } from "@/components/AudienceSection";
 import { FAQSection } from "@/components/FAQSection";
 import { OfferSection } from "@/components/OfferSection";
 import { FinalCTASection } from "@/components/FinalCTASection";
+import { CTABanner } from "@/components/CTAButton";
+
+import holographicRobot from "@/assets/holographic-robot.jpg";
+import automationFlow from "@/assets/automation-flow.jpg";
+import aiBrain from "@/assets/ai-brain.jpg";
 
 const Index = () => {
   return (
@@ -17,14 +23,33 @@ const Index = () => {
       <Particles />
       <div className="relative z-10">
         <HeroSection />
+
+        <CinematicDivider image={holographicRobot} alt="Robô futurista com hologramas" />
+
         <StorySection />
+
+        <CinematicDivider image={automationFlow} alt="Fluxo de automação" />
+
         <BeliefsSection />
+        <CTABanner />
+
         <WhatYouBuildSection />
+
+        <CinematicDivider image={aiBrain} alt="Cérebro de IA digital" />
+
         <HowItWorksSection />
+
         <ResultsSection />
+        <CTABanner />
+
         <TestimonialsSection />
+        <CTABanner />
+
         <AudienceSection />
+
         <FAQSection />
+        <CTABanner />
+
         <OfferSection />
         <FinalCTASection />
 

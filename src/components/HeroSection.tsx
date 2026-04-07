@@ -1,8 +1,9 @@
-import heroImage from "@/assets/hero-image.jpg";
+import heroImage from "@/assets/hero-image-v2.jpg";
+import { CTAButton } from "@/components/CTAButton";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden grid-bg">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
@@ -10,15 +11,17 @@ export function HeroSection() {
           alt="Homem focado usando tecnologia de IA"
           width={1024}
           height={1024}
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-50"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/90 to-background/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40" />
+        {/* Green glow behind subject */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-primary/10 blur-[120px]" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
         <div className="max-w-2xl">
-          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-medium tracking-wider uppercase bg-primary/10 text-primary neon-border mb-6">
+          <span className="inline-block px-4 py-1.5 rounded-full text-xs font-medium tracking-wider uppercase bg-primary/10 text-primary neon-border mb-6 animate-fade-in">
             Automação & Inteligência Artificial
           </span>
 
@@ -39,16 +42,13 @@ export function HeroSection() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 items-start">
-            <a
-              href="#oferta"
-              className="inline-flex items-center px-8 py-4 rounded-lg bg-primary text-primary-foreground font-bold text-lg btn-glow hover:brightness-110 transition-all duration-300"
-            >
-              COMEÇAR AGORA
-            </a>
-            <p className="text-sm text-muted-foreground mt-2 sm:mt-3">
-              Acesso imediato + prática desde o primeiro dia
-            </p>
+            <CTAButton />
+            <CTAButton text="VER COMO FUNCIONA" href="#como-funciona" secondary />
           </div>
+
+          <p className="text-sm text-muted-foreground mt-4">
+            Acesso imediato + prática desde o primeiro dia
+          </p>
         </div>
       </div>
     </section>
